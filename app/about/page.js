@@ -67,12 +67,12 @@ export default function Page() {
             dedication to creating a warm, welcoming environment.
           </p>
           <p>
-            Over the years, we've maintained the essence of The Wild Oasis,
+            Over the years, we&apos;ve maintained the essence of The Wild Oasis,
             blending the timeless beauty of the mountains with the personal
-            touch only a family business can offer. Here, you're not just a
-            guest; you're part of our extended family. So join us at The Wild
-            Oasis soon, where tradition meets tranquility, and every visit is
-            like coming home.
+            touch only a family business can offer. Here, you&apos;re not just a
+            guest; you&apos;re part of our extended family. So join us at The
+            Wild Oasis soon, where tradition meets tranquility, and every visit
+            is like coming home.
           </p>
 
           <div>
