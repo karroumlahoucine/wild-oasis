@@ -3,7 +3,8 @@
 import { revalidatePath } from "next/cache";
 import { auth, signIn, signOut } from "./auth";
 import { supabase } from "./supabase";
-import { getBooking, getBookings } from "./data-service";
+import { getBooking, getBookings, getCabin } from "./data-service";
+import { redirect } from "next/navigation";
 
 export async function signInAction() {
   await signIn("google", {
@@ -52,7 +53,6 @@ export async function updateGuest(formData) {
 export async function deleteBooking(bookingId) {
   const session = await auth();
   if (!session) throw new Error("You must be logged in");
-
   const guestBookings = await getBookings(session.user.guestId);
   const guestBookingsIds = guestBookings.map((book) => book.id);
 
@@ -71,4 +71,50 @@ export async function deleteBooking(bookingId) {
   }
 
   revalidatePath("/account/reservations");
+}
+
+export async function updateBooking(formData) {
+  // authentification
+  const session = await auth();
+  if (!session) throw new Error("You must be logged in");
+
+  //autherization
+  const reservationId = formData.get("reservationId");
+  const { guestId, cabinId } = await getBooking(reservationId);
+  if (session.user.guestId !== guestId) {
+    throw new Error("You are not allowed to delete this booking");
+  }
+
+  const { maxCapacity } = await getCabin(cabinId);
+
+  // validation
+  const numGuests = Number(formData.get("numGuests"));
+
+  if (numGuests > maxCapacity) {
+    throw new Error(
+      "number of guest is more than the max capacity of the cabin"
+    );
+  }
+
+  const observations = formData.get("observations");
+  if (observations.length > 100) {
+    throw new Error("observation is too long");
+  }
+
+  const { error } = await supabase
+    .from("bookings")
+    .update({ numGuests, observations })
+    .eq("id", reservationId)
+    .select()
+    .single();
+
+  if (error) {
+    console.error(error);
+    throw new Error("Booking could not be updated");
+  }
+
+  revalidatePath("/account/reservations");
+  revalidatePath(`/account/reservations/edit/${reservationId}`);
+
+  redirect("/account/reservations");
 }
