@@ -4,7 +4,6 @@ import ReservationCard from "./ReservationCard";
 import { deleteBooking } from "../_lib/actions";
 
 function ReservationList({ bookings }) {
-  hello;
   const [optimisticBookings, optimisticDelete] = useOptimistic(
     bookings,
     //update function (current state,whatever we pass)
