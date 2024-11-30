@@ -20,6 +20,7 @@ const authConfig = {
       return !!auth?.user;
     },
 
+    // It is triggered after the authentication provider has returned user details but before finalizing the session creation.
     async signIn({ user, account, profile }) {
       try {
         const existingGuest = await getGuest(user.email);
@@ -35,8 +36,9 @@ const authConfig = {
         return false;
       }
     },
+
     // we can basically get the user from the session : executed after the signIn function and before the auth
-    async session({ session, user }) {
+    async session({ session }) {
       const guest = await getGuest(session.user.email);
       session.user.guestId = guest.id;
       return session;

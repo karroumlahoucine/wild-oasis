@@ -11,6 +11,7 @@ function CabinCard({ cabin }) {
         <Image
           src={image}
           alt={`Cabin ${name}`}
+          quality={5}
           fill
           className="object-cover border-r border-primary-800"
         />
