@@ -10,11 +10,10 @@ export const metadata = {
 
 // export const revalidate = 0; WILL MAKE IT a dynamic route
 //this doen't take effect anymore becuase we read from the url
-export const revalidate = 30;
+//export const revalidate = 30;
 
 export default function Page({ searchParams }) {
   const filter = searchParams?.capacity ?? "all";
-
   return (
     <div>
       <h1 className="text-4xl mb-5 text-accent-400 font-medium">

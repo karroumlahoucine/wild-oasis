@@ -44,7 +44,6 @@ export const getCabins = async function () {
     .order("name");
 
   // await new Promise((res) => setTimeout(res, 3000));
-
   if (error) {
     console.error(error);
     throw new Error("Cabins could not be loaded");
@@ -180,43 +179,6 @@ export async function createBooking(newBooking) {
 
   return data;
 }
-
-/////////////
-// UPDATE
-
-// The updatedFields is an object which should ONLY contain the updated data
-// export async function updateGuest(id, updatedFields) {
-//   const { data, error } = await supabase
-//     .from("guests")
-//     .update(updatedFields)
-//     .eq("id", id)
-//     .select()
-//     .single();
-
-//   if (error) {
-//     console.error(error);
-//     throw new Error("Guest could not be updated");
-//   }
-//   return data;
-// }
-
-// export async function updateBooking(id, updatedFields) {
-//   const { data, error } = await supabase
-//     .from("bookings")
-//     .update(updatedFields)
-//     .eq("id", id)
-//     .select()
-//     .single();
-
-//   if (error) {
-//     console.error(error);
-//     throw new Error("Booking could not be updated");
-//   }
-//   return data;
-// }
-
-/////////////
-// DELETE
 
 export async function deleteBooking(id) {
   const { data, error } = await supabase.from("bookings").delete().eq("id", id);

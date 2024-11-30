@@ -3,7 +3,7 @@
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 function Filter() {
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams(); //readonly
   const activeFilter = searchParams.get("capacity");
   const router = useRouter();
   const pathName = usePathname();
