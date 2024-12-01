@@ -15,7 +15,10 @@ function isAlreadyBooked(range, datesArr) {
     range?.from &&
     range?.to &&
     datesArr.some((date) =>
-      isWithinInterval(date, { start: range.from, end: range.to })
+      isWithinInterval(new Date(date), {
+        start: range.from,
+        end: range.to,
+      })
     )
   );
 }
@@ -24,16 +27,16 @@ function isAlreadyBooked(range, datesArr) {
 // {from: Sun Dec 08 2024 00:00:00 GMT+0100 (GMT+01:00), to: Sat Dec 14 2024 00:00:00 GMT+0100 (GMT+01:00)}
 function DateSelector({ settings, bookedDates, cabin }) {
   const { range, setRange, resetRange } = useReservation();
-  const displayRange = isAlreadyBooked(range, bookedDates) ? {} : range;
+  const isBooked = isAlreadyBooked(range, bookedDates);
+  const displayRange = isBooked ? {} : range;
   const { regularPrice, discount } = cabin;
-
-  console.log(range);
-
+  if (isBooked) resetRange();
   const numNights =
     range?.from && range?.to
       ? differenceInDays(displayRange.to, displayRange.from)
       : null;
   const cabinPrice = numNights * (regularPrice - discount);
+  console.log(range);
 
   // SETTINGS
   const { minBookingLength, maxBookingLength } = settings;
@@ -53,7 +56,7 @@ function DateSelector({ settings, bookedDates, cabin }) {
         numberOfMonths={2}
         disabled={(curDate) =>
           isPast(curDate) ||
-          bookedDates.some((date) => isSameDay(date, curDate))
+          bookedDates.some((date) => isSameDay(new Date(date), curDate))
         }
       />
 
