@@ -9,21 +9,30 @@ import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 import { useReservation } from "../_context/ReservationContext";
 
+// check if a selected range is include an already booked date/day
 function isAlreadyBooked(range, datesArr) {
   return (
-    range.from &&
-    range.to &&
+    range?.from &&
+    range?.to &&
     datesArr.some((date) =>
       isWithinInterval(date, { start: range.from, end: range.to })
     )
   );
 }
 
+// console.log(range);
+// {from: Sun Dec 08 2024 00:00:00 GMT+0100 (GMT+01:00), to: Sat Dec 14 2024 00:00:00 GMT+0100 (GMT+01:00)}
 function DateSelector({ settings, bookedDates, cabin }) {
   const { range, setRange, resetRange } = useReservation();
   const displayRange = isAlreadyBooked(range, bookedDates) ? {} : range;
   const { regularPrice, discount } = cabin;
-  const numNights = differenceInDays(displayRange.to, displayRange.from);
+
+  console.log(range);
+
+  const numNights =
+    range?.from && range?.to
+      ? differenceInDays(displayRange.to, displayRange.from)
+      : null;
   const cabinPrice = numNights * (regularPrice - discount);
 
   // SETTINGS
@@ -36,10 +45,9 @@ function DateSelector({ settings, bookedDates, cabin }) {
         mode="range"
         onSelect={setRange}
         selected={displayRange}
-        min={minBookingLength + 1}
+        min={minBookingLength}
         max={maxBookingLength}
-        fromMonth={new Date()}
-        fromDate={new Date()}
+        startMonth={new Date()}
         toYear={new Date().getFullYear() + 5}
         captionLayout="dropdown"
         numberOfMonths={2}
@@ -77,7 +85,7 @@ function DateSelector({ settings, bookedDates, cabin }) {
           ) : null}
         </div>
 
-        {range.from || range.to ? (
+        {range?.from || range?.to ? (
           <button
             className="border border-primary-800 py-2 px-4 text-sm font-semibold"
             onClick={resetRange}
