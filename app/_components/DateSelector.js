@@ -1,4 +1,5 @@
 "use client";
+
 import {
   differenceInDays,
   isPast,
@@ -23,8 +24,6 @@ function isAlreadyBooked(range, datesArr) {
   );
 }
 
-// console.log(range);
-// {from: Sun Dec 08 2024 00:00:00 GMT+0100 (GMT+01:00), to: Sat Dec 14 2024 00:00:00 GMT+0100 (GMT+01:00)}
 function DateSelector({ settings, bookedDates, cabin }) {
   const { range, setRange, resetRange } = useReservation();
   const isBooked = isAlreadyBooked(range, bookedDates);
@@ -36,24 +35,25 @@ function DateSelector({ settings, bookedDates, cabin }) {
       ? differenceInDays(displayRange.to, displayRange.from)
       : null;
   const cabinPrice = numNights * (regularPrice - discount);
-  console.log(range);
 
   // SETTINGS
   const { minBookingLength, maxBookingLength } = settings;
 
   return (
-    <div className="flex flex-col justify-between">
+    <div className="flex flex-col justify-between mb-12 border border-primary-800">
       <DayPicker
-        className="pt-12 place-self-center"
+        className="pt-9 flex justify-center min-h-[380px]"
         mode="range"
         onSelect={setRange}
         selected={displayRange}
         min={minBookingLength}
         max={maxBookingLength}
-        startMonth={new Date()}
+        fromMonth={new Date()}
         toYear={new Date().getFullYear() + 5}
         captionLayout="dropdown"
+        showOutsideDays={false}
         numberOfMonths={2}
+        pagedNavigation={false}
         disabled={(curDate) =>
           isPast(curDate) ||
           bookedDates.some((date) => isSameDay(new Date(date), curDate))
