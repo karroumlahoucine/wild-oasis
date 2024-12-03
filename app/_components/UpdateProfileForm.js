@@ -3,10 +3,7 @@
 import { updateGuest } from "../_lib/actions";
 import { useFormStatus } from "react-dom";
 
-//import SelectCountry from "./SelectCountry";
-
 function UpdateProfileForm({ children, guest }) {
-  // CHANGE
   const { fullName, email, nationalID, countryFlag } = guest;
 
   return (
