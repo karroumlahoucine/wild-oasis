@@ -4,8 +4,9 @@ This is a modern cabin booking web application built with Next.js with React, ta
 
 ## ⚡ Key Features  
 
-### **Authentication**  
+### **Authentication & Authorization**  
 - Secure Google authentication for seamless user login.  
+- Authorization checks ensure users can only access their own bookings and profile.   
 
 ### **Cabin Management**  
 - Browse and view detailed information about cabins.  
