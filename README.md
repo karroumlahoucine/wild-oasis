@@ -28,7 +28,16 @@ This is a modern cabin booking web application built with Next.js with React, ta
 ### **Additional Features**    
 - Clean and scalable codebase for future enhancements.  
 
+---
 
+## 🛠 Tech Stack  
+
+- **Frontend**: Next.js 14, React, Tailwind CSS  
+- **Backend**: Supabase, NextAuth for authentication  
+- **Utilities**: Date-fns for date manipulation  
+- **Hosting**: Vercel
+
+---
 
 ![1](https://github.com/user-attachments/assets/4a44cd02-dcc0-472a-9af1-a6172eee2ed2)
 ![2](https://github.com/user-attachments/assets/9ea7e4cc-2b9a-4148-a18e-6bfd22f689ee)
