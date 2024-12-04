@@ -1,6 +1,32 @@
-Cabin Booking App
+# Cabin Booking Web Application
 
 This is a modern cabin booking web application built with Next.js with React, tailwind css, supabase, nextAuth, optimized exclusively for desktop users. The app provides a seamless experience for browsing and reserving cabins in a user-friendly interface.
+
+## ⚡ Key Features  
+
+### **Authentication**  
+- Secure Google authentication for seamless user login.  
+
+### **Cabin Management**  
+- Browse and view detailed information about cabins.  
+- Filter cabins by maximum capacity to suit user needs.  
+
+### **Booking System**  
+- Book cabins within available date ranges.  
+- Disable booked dates in the calendar for accurate availability.  
+- Specify the number of guests (within cabin capacity) during booking.  
+- Add optional observations to bookings.  
+
+### **User Management**  
+- Edit and update user profile information.  
+
+### **Booking Management**  
+- View a list of user bookings.  
+- Filter bookings by capacity.  
+- Edit or delete existing bookings.  
+
+### **Additional Features**    
+- Clean and scalable codebase for future enhancements.  
 
 ![1](https://github.com/user-attachments/assets/4a44cd02-dcc0-472a-9af1-a6172eee2ed2)
 ![2](https://github.com/user-attachments/assets/9ea7e4cc-2b9a-4148-a18e-6bfd22f689ee)
