@@ -22,7 +22,6 @@ This is a modern cabin booking web application built with Next.js with React, ta
 
 ### **Booking Management**  
 - View a list of user bookings.  
-- Filter bookings by capacity.  
 - Edit or delete existing bookings.  
 
 ### **Additional Features**    
