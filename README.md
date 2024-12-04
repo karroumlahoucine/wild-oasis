@@ -1,6 +1,10 @@
-# Cabin Booking Web Application
+# Cabin Booking Web Application 🚀
 
-This is a modern cabin booking web application built with Next.js with React, tailwind css, supabase, nextAuth, optimized exclusively for desktop users. The app provides a seamless experience for browsing and reserving cabins in a user-friendly interface.
+- This is a modern cabin booking web application built with Next.js with React, tailwind css, supabase, nextAuth, optimized exclusively for desktop users. The app provides a seamless experience for browsing and reserving cabins in a user-friendly interface. 
+
+- I built this project to deepen my understanding of Next.js fundamentals and gain practical experience in developing scalable web applications, with a focus on core features like authentication and authorization, server-side rendering (SSR), Incremental Static Regeneration (ISR), dynamic routing, and server-side actions. ✅
+
+---
 
 ## ⚡ Key Features  
 
