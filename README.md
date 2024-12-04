@@ -1,36 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Cabin Booking App
 
-## Getting Started
+This is a modern cabin booking web application built with Next.js with React, tailwind css, supabase, nextAuth, optimized exclusively for desktop users. The app provides a seamless experience for browsing and reserving cabins in a user-friendly interface.
 
-First, run the development server:
+![1](https://github.com/user-attachments/assets/40f97da3-9a73-4802-8e12-cbb107ee2e3a)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![2](https://github.com/user-attachments/assets/6df4b8a5-7931-4ef0-8413-ea0ddff35a86)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![3](https://github.com/user-attachments/assets/ebd96f5d-af85-451f-ab6e-4cd48ea618c6)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+![4](https://github.com/user-attachments/assets/3a86ef94-c737-4a60-815f-46105aa3c4c4)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![5](https://github.com/user-attachments/assets/201fdfcf-f2ad-4376-bf4b-d2742bc6e760)
 
-## Learn More
+![6](https://github.com/user-attachments/assets/7eb7b273-0715-41b9-b9e7-e5c745f706ba)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![7](https://github.com/user-attachments/assets/e06ec292-18ae-496e-81fc-c6ffa0a11ac2)
