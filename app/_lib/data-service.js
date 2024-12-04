@@ -118,7 +118,7 @@ export async function getBookedDatesByCabinId(cabinId) {
       });
     })
     .flat();
-  return bookedDates.map((date) => date.toString());
+  return bookedDates;
 }
 
 export async function getSettings() {

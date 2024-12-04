@@ -15,12 +15,13 @@ function isAlreadyBooked(range, datesArr) {
   return (
     range?.from &&
     range?.to &&
-    datesArr.some((date) =>
-      isWithinInterval(new Date(date), {
+    datesArr.some((date) => {
+      console.log("date", date);
+      return isWithinInterval(new Date(date), {
         start: range.from,
         end: range.to,
-      })
-    )
+      });
+    })
   );
 }
 
