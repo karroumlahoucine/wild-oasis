@@ -2,16 +2,11 @@ Cabin Booking App
 
 This is a modern cabin booking web application built with Next.js with React, tailwind css, supabase, nextAuth, optimized exclusively for desktop users. The app provides a seamless experience for browsing and reserving cabins in a user-friendly interface.
 
-![1](https://github.com/user-attachments/assets/40f97da3-9a73-4802-8e12-cbb107ee2e3a)
-
-![2](https://github.com/user-attachments/assets/6df4b8a5-7931-4ef0-8413-ea0ddff35a86)
-
-![3](https://github.com/user-attachments/assets/ebd96f5d-af85-451f-ab6e-4cd48ea618c6)
-
-![4](https://github.com/user-attachments/assets/3a86ef94-c737-4a60-815f-46105aa3c4c4)
-
-![5](https://github.com/user-attachments/assets/201fdfcf-f2ad-4376-bf4b-d2742bc6e760)
-
-![6](https://github.com/user-attachments/assets/7eb7b273-0715-41b9-b9e7-e5c745f706ba)
-
-![7](https://github.com/user-attachments/assets/e06ec292-18ae-496e-81fc-c6ffa0a11ac2)
+![1](https://github.com/user-attachments/assets/4a44cd02-dcc0-472a-9af1-a6172eee2ed2)
+![2](https://github.com/user-attachments/assets/9ea7e4cc-2b9a-4148-a18e-6bfd22f689ee)
+![3](https://github.com/user-attachments/assets/eccb7295-bcfe-4a8d-97c4-24c5c9ea08a5)
+![4](https://github.com/user-attachments/assets/0b535b9e-538d-4a6c-83c5-864e0aa8ccaf)
+![5](https://github.com/user-attachments/assets/478245fc-3136-4091-aa7e-9b532f2e5b7d)
+![6](https://github.com/user-attachments/assets/fbe3fab1-946f-400b-94d0-1bda31123d6c)
+![7](https://github.com/user-attachments/assets/55037609-637c-48df-87c1-13149963b7e7)
+![8](https://github.com/user-attachments/assets/397de419-5fda-4d49-b2fc-f27a430e4a40)
